@@ -1,6 +1,6 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Icons } from "@/components/Icon";
-import { ArrowRight, Check, Star } from "lucide-react";
+import { Check } from "lucide-react";
 import { Reviews } from "@/components/Reviews";
 import { FaWhatsapp } from "react-icons/fa";
 

@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils"
 import { HTMLAttributes } from "react"
 
 interface PhoneProps extends HTMLAttributes<HTMLDivElement> {
@@ -6,7 +5,7 @@ interface PhoneProps extends HTMLAttributes<HTMLDivElement> {
     dark?: boolean
 }
 
-const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
+const Phone = ({ imgSrc}: PhoneProps) => {
     return (
 <div className="relative w-full aspect-square">
     <img
