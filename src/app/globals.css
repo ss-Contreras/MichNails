@@ -3,25 +3,95 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --input-background: #ffffff;
+  --input-foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --input-background: #ffffff;
+    --input-foreground: #1a1a1a;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mejoras de estilo para inputs cuando están enfocados */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #a5b4fc; /* Color más claro para el borde (Tailwind blue-300) */
+  box-shadow: 0 0 0 2px rgba(165, 180, 252, 0.3); /* Shadow azul más claro, para mayor accesibilidad */
+}
+
+/* Estilo para inputs cuando están en hover */
+input:hover,
+textarea:hover {
+  border-color: #d1d5db; /* Un gris muy claro para un hover más sutil */
+  box-shadow: 0 0 0 2px rgba(209, 213, 219, 0.2); /* Un ligero sombreado para hacer el hover más claro */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 345 65% 80%; /* Tono rosado más oscuro para el fondo */
+    --foreground: 224 71.4% 4.1%;
+    --card: 345 65% 80%; /* Fondo de las tarjetas en color rosa */
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 345 65% 80%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 345 65% 80%; /* Manteniendo un tono rosa como color primario */
+    --primary-foreground: 210 20% 98%;
+    --secondary: 345 65% 65%; /* Rosa un poco más fuerte para elementos secundarios */
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 345 65% 85%; /* Color de tono rosado suave */
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 345 65% 80%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 345 65% 65%; /* Color rosado para bordes */
+    --input: 345 65% 80%;
+    --ring: 345 65% 80%; /* Color del ring */
+    --radius: 0.5rem;
+    --chart-1: 345 65% 65%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 345 65% 75%; /* Un tono de rosa más oscuro para el modo oscuro */
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 345 65% 80%; /* Manteniendo el tono rosa en modo oscuro */
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 345 65% 75%; /* Un poco más oscuro para borde en modo oscuro */
+    --input: 345 65% 80%;
+    --ring: 345 65% 80%;
+    --chart-1: 345 65% 65%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }

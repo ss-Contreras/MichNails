@@ -1,101 +1,114 @@
-import Image from "next/image";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import { Icons } from "@/components/Icon";
+import { ArrowRight, Check, Star } from "lucide-react";
+import { Reviews } from "@/components/Reviews";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="bg-slate-50">
+      <section id="inicio">
+        <MaxWidthWrapper className="pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
+          <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
+            <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
+              <div className="absolute w-28 left-0 -top-20 hidden lg:block">
+                {/* <img src="/nail.png" className="w-full" /> */}
+              </div>
+              <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl"> Manicurista <span className="bg-pink-300 px-2 text-white">Profesional</span>
+              </h1>
+              <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
+                ¡Dale a tus manos el cuidado que merecen! 💅🏼 Ofrecemos manicuras clásicas, diseños personalizados,
+                uñas <span className="font-semibold"> Semipermanente, Press on y Polygel </span> que reflejan tu personalidad. Disfruta de un ambiente relajante mientras transformamos
+                tus uñas en verdaderas obras de arte.
+              </p>
+              <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
+                <div className="space-y-2">
+                  <li className="flex gap-1.5 items-center text-left">
+                    <Check className="h-5 w-5 shrink-0 text-pink-400" />
+                    Certificación Profesional, Calidad Garantizada
+                  </li>
+                  <li className="flex gap-1.5 items-center text-left">
+                    <Check className="h-5 w-5 shrink-0 text-pink-400" />
+                    Diseños Personalizados para Cada Ocasión
+                  </li>
+                  <li className="flex gap-1.5 items-center text-left">
+                    <Check className="h-5 w-5 shrink-0 text-pink-400" />
+                    Uso de Productos de Alta Durabilidad y Brillo
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit">
+            <div className="relative md:max-w-xl">
+              <img src="/line.png" className="absolute w-20 -left-6 -bottom-6 select-none animate-pulse text-rose-300" />
+              <div className="relative overflow-hidden rounded-[1.5rem] shadow-lg">
+                <img className="object-cover w-full h-full rounded-[1.5rem] transform hover:scale-105 transition-transform duration-300" src="/testimonials/mich.jpeg" />
+              </div>
+              <p className="mt-4 text-lg text-center text-pink-400 font-semibold animate-fadeIn">
+                Michelle Solangie
+              </p>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Sección de Reviews */}
+      <section id="catalogo" className="bg-slate-100 py-16 sm:py-24">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+          <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
+            <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900">
+              Uñas de nuestras
+              <span className="relative px-2">
+                clientas
+                <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-pink-400" />
+              </span>
+            </h2>
+          </div>
+        </MaxWidthWrapper>
+
+        <div className="pt-16">
+          <Reviews />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Sección de Contacto */}
+      <section id="contactame" className="bg-white py-24">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+          <div className="text-center">
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-8">Contáctame</h2>
+            <p className="text-lg max-w-prose mx-auto text-gray-600">
+              ¡Agenda tu cita o resuelve tus dudas directamente conmigo a través de WhatsApp! Respuesta rápida y personalizada.
+            </p>
+            <div className="w-full max-w-2xl bg-slate-50 p-8 shadow-lg rounded-xl flex flex-col items-center gap-6 text-center">
+              <p className="text-lg text-gray-700">
+                Haz clic en el botón de abajo para enviarme un mensaje por WhatsApp y empezar a transformar tus uñas.
+              </p>
+
+              <a
+                href="https://web.whatsapp.com/send?phone=+573224400528&text=¡Hola!%20Quiero%20más%20información%20sobre%20tus%20servicios."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full text-lg font-semibold shadow-md transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300"
+              >
+                <FaWhatsapp className="h-6 w-6" />
+                Contáctame por WhatsApp
+              </a>
+
+              <div className="mt-4">
+                <p className="text-lg text-gray-700 font-medium">Michelle Solangie</p>
+                <p className="text-lg font-semibold text-gray-700">Número de contacto: +57 322 4400528</p>
+                <p className="text-sm text-gray-500">
+                  ¡Te responderé lo antes posible!
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </MaxWidthWrapper>
+      </section>
     </div>
   );
 }
