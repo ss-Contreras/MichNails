@@ -87,7 +87,7 @@ export default function Home() {
               </p>
 
               <a
-                href="https://web.whatsapp.com/send?phone=+573224400528&text=¡Hola!%20Quiero%20más%20información%20sobre%20tus%20servicios."
+                href="https://api.whatsapp.com/send?phone=+573224400528&text=¡Hola!%20Quiero%20más%20información%20sobre%20tus%20servicios."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full text-lg font-semibold shadow-md transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300"
