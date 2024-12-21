@@ -6,6 +6,11 @@ import { FaWhatsapp } from "react-icons/fa";
 
 
 export default function Home() {
+
+  const isMobile = typeof window !== "undefined" && /Mobi|Android/i.test(navigator.userAgent);
+  const whatsappLink = isMobile
+    ? "https://api.whatsapp.com/send?phone=+573224400528&text=¡Hola!%20Quiero%20más%20información%20sobre%20tus%20servicios%20de%20uñas."
+    : "https://api.whatsapp.com/send?phone=+573224400528&text=¡Hola!%20Quiero%20más%20información%20sobre%20tus%20servicios%20de%20uñas.";
   return (
     <div className="bg-slate-50">
       <section id="inicio">
@@ -19,7 +24,7 @@ export default function Home() {
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
                 ¡Dale a tus manos el cuidado que merecen! 💅🏼 Ofrecemos manicuras clásicas, diseños personalizados,
-                uñas <span className="font-semibold"> Semipermanente, Press on y Polygel </span> que reflejan tu personalidad. Disfruta de un ambiente relajante mientras transformamos
+                uñas <span className="font-semibold"> Semipermanente, <span className="mt-4 text-lg text-center text-pink-400 font-semibold animate-fadeIn">Press on Personalizadas</span> y Polygel </span> que reflejan tu personalidad. Disfruta de un ambiente relajante mientras transformamos
                 tus uñas en verdaderas obras de arte.
               </p>
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
@@ -40,6 +45,20 @@ export default function Home() {
               </ul>
             </div>
           </div>
+          <div className="relative isolate">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          >
+            <div
+              style={{
+                clipPath:
+                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+              }}
+              className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            >
+            </div>
+          </div>
           <div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit">
             <div className="relative md:max-w-xl">
               <img src="/line.png" className="absolute w-20 -left-6 -bottom-6 select-none animate-pulse text-rose-300" />
@@ -51,6 +70,22 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <div>
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        >
+          <div
+            style={{
+              clipPath:
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+            }}
+            className="relative left-[calc(50%-13rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-36rem)] sm:w-[72.1875rem]"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
         </MaxWidthWrapper>
       </section>
 
@@ -87,7 +122,7 @@ export default function Home() {
               </p>
 
               <a
-                href="https://api.whatsapp.com/send?phone=+573224400528&text=¡Hola!%20Quiero%20más%20información%20sobre%20tus%20servicios%20de%20uñas."
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full text-lg font-semibold shadow-md transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300"
