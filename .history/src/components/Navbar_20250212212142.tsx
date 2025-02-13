@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import MaxWidthWrapper from './MaxWidthWrapper';
 import { buttonVariants } from './ui/button';
-import Image from 'next/image';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky z-[100] top-0 w-full border-b border-pink-300 bg-white/60 backdrop-blur-lg shadow-md transition-all">
+    <nav className="sticky z-[100] h-20 inset-x-0 top-0 w-full border-b border-pink-300 bg-white/60 backdrop-blur-lg shadow-md transition-all">
       <MaxWidthWrapper>
         <div className="flex h-20 items-center justify-between border-b border-pink-300 px-6">
           {/* Logo */}
@@ -22,12 +21,10 @@ const Navbar = () => {
             href="/"
             className="flex items-center z-40 font-bold text-2xl text-gray-800"
           >
-            <Image
+            <img
               className="h-14 w-auto object-contain rounded-full transform hover:scale-110 transition-transform duration-300 shadow-lg border-2 border-pink-400"
               src="/logo-mich.png"
-              alt="Logo of Mich Nails"
-              width={56}
-              height={56}
+              alt="Mich Nails Logo"
             />
             <div className="ml-3 mt-2 tracking-wide">
               Mich<span className="text-pink-500">Nails</span>
@@ -44,15 +41,6 @@ const Navbar = () => {
               })} font-semibold`}
             >
               Catálogo
-            </Link>
-            <Link
-              href="#services"
-              className={`${buttonVariants({
-                size: 'lg',
-                variant: 'default',
-              })} font-semibold`}
-            >
-              Servicios
             </Link>
             <Link
               href="#contactame"
@@ -109,9 +97,9 @@ const Navbar = () => {
         </div>
       </MaxWidthWrapper>
 
-      {/* Menú móvil con fondo transparente y estilo similar al header */}
+      {/* Menú móvil */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white/60 backdrop-blur-lg border-t border-pink-300 shadow-md">
+        <div className="md:hidden border-t border-pink-300">
           <div className="px-6 py-4 flex flex-col space-y-2">
             <Link
               href="#catalogo"
@@ -122,16 +110,6 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Catálogo
-            </Link>
-            <Link
-              href="#services"
-              className={`${buttonVariants({
-                size: 'lg',
-                variant: 'default',
-              })} font-semibold`}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Servicios
             </Link>
             <Link
               href="#contactame"

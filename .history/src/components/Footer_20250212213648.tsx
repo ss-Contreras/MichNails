@@ -11,15 +11,15 @@ const Footer = () => {
           <div className="flex items-center">
             <Link href="/" className='flex items-center'>
                 <Image
-                  className="h-40 w-auto object-contain rounded-full transform hover:scale-110 transition-transform duration-300 shadow-lg border-2"
+                  className="h- w-auto object-contain rounded-full transform hover:scale-110 transition-transform duration-300 shadow-lg border-2 border-pink-400"
                   src="/logo-mich.png"
                   alt="Logo of Mich Nails"
                   width={100}
                   height={100}
                 />
-                {/* <span className="ml-3 text-2xl font-bold text-gray-800">
+                <span className="ml-3 text-2xl font-bold text-gray-800">
                   Mich<span className="text-pink-500">Nails</span>
-                </span> */}
+                </span>
             </Link>
           </div>
 

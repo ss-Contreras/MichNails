@@ -3,7 +3,6 @@ import { Icons } from "@/components/Icon";
 import { Check } from "lucide-react";
 import { Reviews } from "@/components/Reviews";
 import { FaWhatsapp } from "react-icons/fa";
-import PressOn from "@/components/PressOn";
 
 
 export default function Home() {
@@ -15,7 +14,7 @@ export default function Home() {
   return (
     <div className="bg-slate-50">
       <section id="inicio">
-        <MaxWidthWrapper className="pb-24 pt-2 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
+        <MaxWidthWrapper className="pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
@@ -109,18 +108,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className=" py-16 sm:py-24">
+      <section id="catalogo" className="bg-slate-100 py-16 sm:py-24">
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
           <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
             <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900">
-              Nuestros {" "}
-              <span className="relative px-2 text-pink-400 font-semibold animate-fadeIn">Servicios 💅</span>
+              Press On
+              <span className="relative px-2">
+                Personalizadas 💅
+                <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-pink-400" />
+              </span>
             </h2>
           </div>
         </MaxWidthWrapper>
 
         <div className="pt-16">
-          <PressOn/>
+          <Reviews />
         </div>
       </section>
 

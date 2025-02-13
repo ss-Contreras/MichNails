@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="flex items-center">
             <Link href="/" className='flex items-center'>
                 <Image
-                  className="h-40 w-auto object-contain rounded-full transform hover:scale-110 transition-transform duration-300 shadow-lg border-2"
+                  className="h- w-auto object-contain rounded-full transform hover:scale-110 transition-transform duration-300 shadow-lg border-2"
                   src="/logo-mich.png"
                   alt="Logo of Mich Nails"
                   width={100}
