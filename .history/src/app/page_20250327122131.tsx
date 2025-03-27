@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="bg-slate-50">
       <section id="inicio">
-        <MaxWidthWrapper className="pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
+        <MaxWidthWrapper className="pb-24 pt-2 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
@@ -109,15 +109,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="presson" className=" py-16 sm:py-24">
+      <section id="services" className=" py-16 sm:py-24">
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
           <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
             <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900">
-              Press On {" "}
-              {/* <span className="">
-                
-              </span> */}
-              <span className="relative px-2 text-pink-400 font-semibold animate-fadeIn">Personalizadas 💅</span>
+              Nuestros {" "}
+              <span className="relative px-2 text-pink-400 font-semibold animate-fadeIn">Servicios 💅</span>
             </h2>
           </div>
         </MaxWidthWrapper>
@@ -126,6 +123,73 @@ export default function Home() {
           <PressOn/>
         </div>
       </section>
+
+      <section id="videos" className="bg-slate-100 py-16 sm:py-24">
+      <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+        <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 text-center">
+          <h2 className="order-1 mt-2 tracking-tight text-balance !leading-tight font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900">
+            Mira nuestros {" "}
+            <span className="relative px-2 text-pink-400 font-semibold animate-fadeIn">
+              Trabajos en Video
+            </span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4">
+          {/* Video Local */}
+          <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow bg-white p-4">
+            <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
+              <video
+                controls
+                className="w-full h-full rounded-lg"
+                poster="/video/poster-gorillaz.jpg"
+              >
+                <source src="/video/gorillaz-nails.mp4" type="video/mp4" />
+                Tu navegador no soporta el video.
+              </video>
+            </AspectRatio>
+            <p className="text-center mt-3 font-medium text-gray-700 text-lg">Diseño Gorillaz</p>
+          </div>
+
+          {/* Video de YouTube */}
+          <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow bg-white p-4">
+            <a
+              href="https://youtube.com/shorts/xPuIyOqFmto"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block relative"
+            >
+              <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
+                <img
+                  src="https://img.youtube.com/vi/xPuIyOqFmto/maxresdefault.jpg"
+                  alt="Video de YouTube"
+                  className="w-full h-full object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 group-hover:bg-opacity-70 transition">
+                  <FaPlay className="text-white text-4xl" />
+                </div>
+              </AspectRatio>
+            </a>
+            <p className="text-center mt-3 font-medium text-gray-700 text-lg">Video en YouTube</p>
+          </div>
+
+          {/* Video Artístico */}
+          <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow bg-white p-4">
+            <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
+              <video
+                controls
+                className="w-full h-full rounded-lg"
+                poster="/video/poster-artistico.jpg"
+              >
+                <source src="/video/artistico-nails.mp4" type="video/mp4" />
+                Tu navegador no soporta el video.
+              </video>
+            </AspectRatio>
+            <p className="text-center mt-3 font-medium text-gray-700 text-lg">Diseño Artístico</p>
+          </div>
+        </div>
+      </MaxWidthWrapper>
+    </section>
 
       {/* Sección de Contacto */}
       <section id="contactame" className="bg-white py-24">

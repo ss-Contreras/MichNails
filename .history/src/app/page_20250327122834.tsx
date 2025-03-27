@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import { Reviews } from "@/components/Reviews";
 import { FaWhatsapp } from "react-icons/fa";
 import PressOn from "@/components/PressOn";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <div className="bg-slate-50">
       <section id="inicio">
-        <MaxWidthWrapper className="pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
+        <MaxWidthWrapper className="pb-24 pt-2 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
@@ -109,15 +110,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="presson" className="bg-slate-100 py-16 sm:py-24">
+      <section id="services" className=" py-16 sm:py-24">
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
           <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
             <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900">
-              Press On
-              <span className="relative px-2">
-                Personalizadas 💅
-                <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-pink-400" />
-              </span>
+              Nuestros {" "}
+              <span className="relative px-2 text-pink-400 font-semibold animate-fadeIn">Servicios 💅</span>
             </h2>
           </div>
         </MaxWidthWrapper>
@@ -126,6 +124,55 @@ export default function Home() {
           <PressOn/>
         </div>
       </section>
+
+      <section id="videos" className="bg-slate-100 py-16 sm:py-24">
+      <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+        <div className="text-center">
+          <h2 className="tracking-tight font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900">
+            Un poco de Nuestros{" "}
+            <span className="relative px-2 text-pink-400 font-semibold animate-fadeIn">
+              Diseños Realizados
+            </span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-4">
+          {/* Video Local */}
+          <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow bg-white p-4">
+            <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
+              <video
+                controls
+                className="w-full h-full rounded-lg"
+                poster="/video/poster-gorillaz.jpg"
+              >
+                <source src="/video/gorillaz-nails.mp4" type="video/mp4" />
+                Tu navegador no soporta el video.
+              </video>
+            </AspectRatio>
+            <p className="text-center mt-3 font-medium text-gray-700 text-lg">
+              Diseño Gorillaz
+            </p>
+          </div>
+
+          {/* Video de YouTube Embed */}
+          <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow bg-white p-4">
+            <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/xPuIyOqFmto"
+                title="Video de YouTube"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full rounded-lg"
+              />
+            </AspectRatio>
+            <p className="text-center mt-3 font-medium text-gray-700 text-lg">
+              Uñas Personalizadas Gorillaz
+            </p>
+          </div>
+        </div>
+      </MaxWidthWrapper>
+    </section>
 
       {/* Sección de Contacto */}
       <section id="contactame" className="bg-white py-24">

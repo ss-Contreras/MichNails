@@ -3,6 +3,8 @@ import { Icons } from "@/components/Icon";
 import { Check } from "lucide-react";
 import { Reviews } from "@/components/Reviews";
 import { FaWhatsapp } from "react-icons/fa";
+import PressOn from "@/components/PressOn";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 
 export default function Home() {
@@ -14,7 +16,7 @@ export default function Home() {
   return (
     <div className="bg-slate-50">
       <section id="inicio">
-        <MaxWidthWrapper className="pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
+        <MaxWidthWrapper className="pb-24 pt-2 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
@@ -46,46 +48,46 @@ export default function Home() {
             </div>
           </div>
           <div className="relative isolate">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          >
             <div
-              style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-              className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             >
-            </div>
-          </div>
-          <div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit">
-            <div className="relative md:max-w-xl">
-              <img src="/line.png" className="absolute w-20 -left-6 -bottom-6 select-none animate-pulse text-rose-300" />
-              <div className="relative overflow-hidden rounded-[1.5rem] shadow-lg">
-                <img className="object-cover w-full h-full rounded-[1.5rem] transform hover:scale-105 transition-transform duration-300" src="/testimonials/mich.jpeg" />
+              <div
+                style={{
+                  clipPath:
+                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                }}
+                className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+              >
               </div>
-              <p className="mt-4 text-lg text-center text-pink-400 font-semibold animate-fadeIn">
-                Michelle Solangie
-              </p>
+            </div>
+            <div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit">
+              <div className="relative md:max-w-xl">
+                <img src="/line.png" className="absolute w-20 -left-6 -bottom-6 select-none animate-pulse text-rose-300" />
+                <div className="relative overflow-hidden rounded-[1.5rem] shadow-lg">
+                  <img className="object-cover w-full h-full rounded-[1.5rem] transform hover:scale-105 transition-transform duration-300" src="/testimonials/mich.jpeg" />
+                </div>
+                <p className="mt-4 text-lg text-center text-pink-400 font-semibold animate-fadeIn">
+                  Michelle Solangie
+                </p>
+              </div>
+            </div>
+            <div>
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+              >
+                <div
+                  style={{
+                    clipPath:
+                      "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                  }}
+                  className="relative left-[calc(50%-13rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-36rem)] sm:w-[72.1875rem]"
+                >
+                </div>
+              </div>
             </div>
           </div>
-          <div>
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        >
-          <div
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-            className="relative left-[calc(50%-13rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-36rem)] sm:w-[72.1875rem]"
-          >
-          </div>
-        </div>
-      </div>
-    </div>
         </MaxWidthWrapper>
       </section>
 
@@ -107,6 +109,70 @@ export default function Home() {
           <Reviews />
         </div>
       </section>
+
+      <section id="services" className=" py-16 sm:py-24">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+          <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
+            <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900">
+              Nuestros {" "}
+              <span className="relative px-2 text-pink-400 font-semibold animate-fadeIn">Servicios 💅</span>
+            </h2>
+          </div>
+        </MaxWidthWrapper>
+
+        <div className="pt-16">
+          <PressOn/>
+        </div>
+      </section>
+
+      <section id="videos" className="bg-slate-100 py-16 sm:py-24">
+      <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+        <div className="text-center">
+          <h2 className="tracking-tight font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900">
+            Un poco de Nuestros{" "}
+            <span className="relative px-2 text-pink-400 font-semibold animate-fadeIn">
+              Diseños Realizados
+            </span>
+          </h2>
+        </div>
+
+        <div className=" grid-cols-1 md:grid-cols-2 gap-8 w-full px-4">
+          {/* Video Local */}
+          <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow bg-white p-4">
+            <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
+              <video
+                controls
+                className="w-full h-full rounded-lg"
+                poster="/video/poster-gorillaz.jpg"
+              >
+                <source src="/video/gorillaz-nails.mp4" type="video/mp4" />
+                Tu navegador no soporta el video.
+              </video>
+            </AspectRatio>
+            <p className="text-center mt-3 font-medium text-gray-700 text-lg">
+            Uñas Personalizadas Gorillaz
+            </p>
+          </div>
+
+          {/* Video de YouTube Embed */}
+          {/* <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow bg-white p-4">
+            <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/xPuIyOqFmto"
+                title="Video de YouTube"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full rounded-lg"
+              />
+            </AspectRatio>
+            <p className="text-center mt-3 font-medium text-gray-700 text-lg">
+              Uñas Personalizadas Gorillaz
+            </p>
+          </div> */}
+        </div>
+      </MaxWidthWrapper>
+    </section>
 
       {/* Sección de Contacto */}
       <section id="contactame" className="bg-white py-24">

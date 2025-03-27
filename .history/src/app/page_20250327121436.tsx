@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="bg-slate-50">
       <section id="inicio">
-        <MaxWidthWrapper className="pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
+        <MaxWidthWrapper className="pb-24 pt-2 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-6 lg:pb-6">
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
@@ -109,14 +109,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="presson" className=" py-16 sm:py-24">
+      <section id="services" className=" py-16 sm:py-24">
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
           <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
             <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900">
-              Press On
-              <span className="relative px-2">
-                Personalizadas 💅
-              </span>
+              Nuestros {" "}
+              <span className="relative px-2 text-pink-400 font-semibold animate-fadeIn">Servicios 💅</span>
             </h2>
           </div>
         </MaxWidthWrapper>
@@ -124,6 +122,57 @@ export default function Home() {
         <div className="pt-16">
           <PressOn/>
         </div>
+      </section>
+
+      <section id="videos" className="bg-slate-100 py-16 sm:py-24">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+          <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
+            <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900">
+              Mira nuestros {" "}
+              <span className="relative px-2 text-pink-400 font-semibold animate-fadeIn">
+                Trabajos en Video
+              </span>
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4">
+            {/* Ejemplo de video 1 - Reemplazar con tus URLs */}
+            <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <iframe 
+                src="https://youtube.com/shorts/xPuIyOqFmto" 
+                className="w-full h-full"
+                title="Video demostrativo 1"
+                allowFullScreen
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              />
+            </div>
+            
+            {/* Ejemplo de video 2 */}
+            <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <iframe
+                src="https://youtube.com/shorts/xPuIyOqFmto"
+                className="w-full h-full"
+                title="Video demostrativo 2"
+                allowFullScreen
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              />
+            </div>
+            
+            {/* Ejemplo de video 3 */}
+            <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <iframe
+                src="https://youtube.com/shorts/xPuIyOqFmto"
+                className="w-full h-full"
+                title="Video demostrativo 3"
+                allowFullScreen
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              />
+            </div>
+          </div>
+        </MaxWidthWrapper>
       </section>
 
       {/* Sección de Contacto */}
