@@ -20,22 +20,22 @@ const products: Product[] = [
   {
     id: 1,
     title: "Presson de Anime Gojo",
-    price: "$100.000",
-    description: "Uñas press on personalizadas de tus personajes favoritos",
+    price: "$89.900",
+    description: "Uñas press on con cristales premium y diseño francés invertido",
     image: "/testimonials/1.jpeg"
   },
   {
     id: 2,
-    title: "Diseño Rosa Press-on",
-    price: "$60.000",
-    description: "Mezcla explosiva de colores y estilos únicos",
-    image: "/testimonials/16.jpeg"
+    title: "Diseño Abstractos personalizados",
+    price: "$79.900",
+    description: "Mezcla explosiva de colores neón con detalles en foil",
+    image: "/testimonials/2.jpeg"
   },
   {
     id: 3,
     title: "Uñas en Acrilico",
-    price: "$60.000",
-    description: "Elegancia y estilo en tus uñas",
+    price: "$69.900",
+    description: "Elegancia atemporal con línea francesa perfecta",
     image: "/testimonials/17.jpeg"
   },
   // Agrega más productos según sea necesario

@@ -11,18 +11,18 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navigation = [
+    { name: 'Inicio', href: '/' },
     { 
-      name: 'Diseños',
+      name: 'Colecciones',
       submenu: [
-        { name: '💎 Acrilicos', href: '/presson/3' },
-        { name: '🎨 Diseño Rosa', href: '/presson/2' },
-        { name: '🌟 Uñas de Anime', href: '/presson/1' },
+        { name: '💎 Cristales Swarovski', href: '/cristales' },
+        { name: '🎨 Arte Abstracto', href: '/abstracto' },
+        { name: '🌟 Edición Limitada', href: '/limitada' },
       ]
     },
-    { name: 'Catalogo', href: '/#catalogo' },
-    { name: 'Servicios', href: '/#services' },
-    { name: 'Personalizadas', href: '/#videos' },
-    { name: 'Contáctame', href: '/#contactame' },
+    { name: 'Personaliza', href: '/personaliza' },
+    { name: 'Cómo usar', href: '/guia' },
+    { name: 'Blog', href: '/blog' },
   ]
 
   return (
@@ -34,7 +34,7 @@ const Navbar = () => {
             <div className="relative h-14 w-14 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 p-1 shadow-lg transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/logo-mich.png"
-                alt="Logo MichNails"
+                alt="Logo GlamNails"
                 width={56}
                 height={56}
                 className="rounded-full object-contain border-2 border-white"
@@ -42,7 +42,7 @@ const Navbar = () => {
               <div className="absolute inset-0 rounded-full animate-pulse opacity-20 bg-gradient-to-r from-pink-300 to-transparent" />
             </div>
             <span className="text-3xl font-bold bg-gradient-to-r from-rose-600 to-pink-500 bg-clip-text text-transparent">
-              Mich<span className="font-light">Nails</span>
+              Glam<span className="font-light">Nails</span>
             </span>
           </Link>
 
@@ -99,7 +99,7 @@ const Navbar = () => {
             ))}
             
             {/* Carrito con efecto especial */}
-            {/* <button className="ml-4 p-2 relative group">
+            <button className="ml-4 p-2 relative group">
               <div className="relative bg-gradient-to-br from-pink-300 to-rose-400 p-2 rounded-full shadow-lg">
                 <ShoppingBagIcon className="h-6 w-6 text-white" />
                 <span className="absolute -top-1 -right-1 bg-rose-600 text-white h-6 w-6 rounded-full text-xs flex items-center justify-center shadow-sm">
@@ -107,7 +107,7 @@ const Navbar = () => {
                 </span>
               </div>
               <div className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-20 bg-rose-400 duration-1000" />
-            </button> */}
+            </button>
           </div>
 
           {/* Botón Menú Mobile */}
@@ -185,14 +185,14 @@ const Navbar = () => {
                 )
               ))}
               
-              {/* Carrito Mobile
+              {/* Carrito Mobile */}
               <button className="w-full px-4 py-3 bg-gradient-to-r from-pink-400 to-rose-500 text-white rounded-xl flex items-center gap-2 justify-center font-semibold mt-4">
                 <ShoppingBagIcon className="h-5 w-5" />
                 Mi Carrito
                 <span className="ml-2 bg-white text-rose-600 h-6 w-6 rounded-full text-sm flex items-center justify-center shadow-inner">
                   3
                 </span>
-              </button> */}
+              </button>
             </div>
           </div>
         )}

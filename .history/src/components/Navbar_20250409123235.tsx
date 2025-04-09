@@ -19,10 +19,10 @@ const Navbar = () => {
         { name: '🌟 Uñas de Anime', href: '/presson/1' },
       ]
     },
-    { name: 'Catalogo', href: '/#catalogo' },
-    { name: 'Servicios', href: '/#services' },
-    { name: 'Personalizadas', href: '/#videos' },
-    { name: 'Contáctame', href: '/#contactame' },
+    { name: 'Catalogo', href: './#catalogo' },
+    { name: 'Servicios', href: './#services' },
+    { name: 'Personalizadas', href: './#videos' },
+    { name: 'Contáctame', href: './@#contactame' },
   ]
 
   return (

@@ -20,7 +20,7 @@ const products: Product[] = [
   {
     id: 1,
     title: "Presson de Anime Gojo",
-    price: "$100.000",
+    price: "$200.000",
     description: "Uñas press on personalizadas de tus personajes favoritos",
     image: "/testimonials/1.jpeg"
   },

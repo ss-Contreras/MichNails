@@ -19,24 +19,24 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    title: "Presson de Anime Gojo",
-    price: "$100.000",
-    description: "Uñas press on personalizadas de tus personajes favoritos",
-    image: "/testimonials/1.jpeg"
+    title: "Diseño Cristales Swarovski",
+    price: "$89.900",
+    description: "Uñas press on con cristales premium y diseño francés invertido",
+    image: "/designs/cristales.jpg"
   },
   {
     id: 2,
-    title: "Diseño Rosa Press-on",
-    price: "$60.000",
-    description: "Mezcla explosiva de colores y estilos únicos",
-    image: "/testimonials/16.jpeg"
+    title: "Diseño Abstracto Neon",
+    price: "$79.900",
+    description: "Mezcla explosiva de colores neón con detalles en foil",
+    image: "/designs/neon.jpg"
   },
   {
     id: 3,
-    title: "Uñas en Acrilico",
-    price: "$60.000",
-    description: "Elegancia y estilo en tus uñas",
-    image: "/testimonials/17.jpeg"
+    title: "Diseño Clásico Francés",
+    price: "$69.900",
+    description: "Elegancia atemporal con línea francesa perfecta",
+    image: "/designs/frances.jpg"
   },
   // Agrega más productos según sea necesario
 ];
@@ -144,7 +144,7 @@ export default function Home() {
             {products.map((product) => (
               <Link 
                 key={product.id} 
-                href={`/presson/${product.id}`}
+                href={`/products/${product.id}`}
                 className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2"
               >
                 <div className="overflow-hidden rounded-t-2xl">

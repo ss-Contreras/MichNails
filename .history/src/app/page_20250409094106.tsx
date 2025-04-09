@@ -5,41 +5,7 @@ import { Reviews } from "@/components/Reviews";
 import { FaWhatsapp } from "react-icons/fa";
 import PressOn from "@/components/PressOn";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import Link from "next/link";
 
-interface Product {
-  id: number;
-  title: string;
-  price: string;
-  description: string;
-  image: string;
-}
-
-// Datos de ejemplo para el catálogo
-const products: Product[] = [
-  {
-    id: 1,
-    title: "Presson de Anime Gojo",
-    price: "$100.000",
-    description: "Uñas press on personalizadas de tus personajes favoritos",
-    image: "/testimonials/1.jpeg"
-  },
-  {
-    id: 2,
-    title: "Diseño Rosa Press-on",
-    price: "$60.000",
-    description: "Mezcla explosiva de colores y estilos únicos",
-    image: "/testimonials/16.jpeg"
-  },
-  {
-    id: 3,
-    title: "Uñas en Acrilico",
-    price: "$60.000",
-    description: "Elegancia y estilo en tus uñas",
-    image: "/testimonials/17.jpeg"
-  },
-  // Agrega más productos según sea necesario
-];
 
 export default function Home() {
 
@@ -126,57 +92,7 @@ export default function Home() {
       </section>
 
       {/* Catálogo de Uñas Personalizadas Press On */}
-      <section id="press-on" className="py-16 sm:py-24 bg-gradient-to-b from-pink-50 to-white">
-        <MaxWidthWrapper>
-          <div className="text-center mb-16 animate-fadeIn">
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900">
-              Nuestros Diseños{" "}
-              <span className="bg-pink-400 text-white px-4 transform -rotate-3 inline-block">
-                Press On
-              </span>
-            </h2>
-            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-              Descubre nuestras creaciones exclusivas, cada set incluye 24 uñas + kit de aplicación
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-            {products.map((product) => (
-              <Link 
-                key={product.id} 
-                href={`/presson/${product.id}`}
-                className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2"
-              >
-                <div className="overflow-hidden rounded-t-2xl">
-                  <AspectRatio ratio={3/4}>
-                    <img
-                      src={product.image}
-                      alt={product.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </AspectRatio>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
-                  <p className="text-gray-600 min-h-[60px]">{product.description}</p>
-                  <div className="mt-4 flex justify-between items-center">
-                    <span className="text-2xl font-bold text-pink-500">{product.price}</span>
-                    <button className="bg-pink-400 text-white px-6 py-2 rounded-full hover:bg-pink-500 transition-colors">
-                      Ver más
-                    </button>
-                  </div>
-                </div>
-
-                {/* Etiqueta destacada */}
-                <div className="absolute top-4 right-4 bg-white px-4 py-2 rounded-full shadow-md text-pink-500 font-bold">
-                  ¡Nuevo!
-                </div>
-              </Link>
-            ))}
-          </div>
-        </MaxWidthWrapper>
-      </section>
+      <PressOnCatalog />
 
       {/* Sección de Reviews */}
       <section id="catalogo" className="bg-slate-100 py-16 sm:py-24">

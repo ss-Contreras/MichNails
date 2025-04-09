@@ -19,10 +19,10 @@ const Navbar = () => {
         { name: '🌟 Uñas de Anime', href: '/presson/1' },
       ]
     },
-    { name: 'Catalogo', href: '/#catalogo' },
-    { name: 'Servicios', href: '/#services' },
-    { name: 'Personalizadas', href: '/#videos' },
-    { name: 'Contáctame', href: '/#contactame' },
+    { name: 'Catalogo', href: '#catalogo' },
+    { name: 'Servicios', href: '#services' },
+    { name: 'Personalizadas', href: '#videos' },
+    { name: 'Contáctame', href: '#contactame' },
   ]
 
   return (
@@ -34,7 +34,7 @@ const Navbar = () => {
             <div className="relative h-14 w-14 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 p-1 shadow-lg transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/logo-mich.png"
-                alt="Logo MichNails"
+                alt="Logo GlamNails"
                 width={56}
                 height={56}
                 className="rounded-full object-contain border-2 border-white"

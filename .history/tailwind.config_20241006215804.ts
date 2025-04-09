@@ -60,39 +60,27 @@ const config = {
       },
       keyframes: {
         'fade-in': {
-          from: { opacity: '0' },
-          to: { opacity: '1' },
+          from: {
+            opacity: '0',
+          },
+          to: {
+            opacity: '1',
+          },
         },
         marquee: {
-          '100%': { transform: 'translateY(-50%)' },
+          '100%': {
+            transform: 'translateY(-50%)',
+          },
         },
         flashing: {
           '0%, 100%': { opacity: '0.2' },
           '20%': { opacity: "1" },
         },
-        // Nuevas animaciones
-        popIn: {
-          '0%': { 
-            transform: 'scale(0.95)', 
-            opacity: '0' 
-          },
-          '100%': { 
-            transform: 'scale(1)', 
-            opacity: '1' 
-          },
-        },
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' }
-        }
       },
       animation: {
         marquee: 'marquee var(--marquee-duration) linear infinite',
         'fade-in': 'fade-in 0.5s linear forwards',
         flashing: 'flashing 1.4s infinite linear',
-        // Nuevas animaciones registradas
-        popIn: 'popIn 0.3s ease-out',
-        fadeIn: 'fadeIn 0.5s ease-in'
       },
     },
   },
